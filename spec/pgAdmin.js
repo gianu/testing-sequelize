@@ -25,7 +25,7 @@ var pgAdmin = {
                 query = 'TRUNCATE persons RESTART IDENTITY CASCADE';
                 sequelize.query( query )
                         .then(function() {
-
+                          console.log('Done!');
                           sequelize.close();
                           callback();
                         }, function(error) {
