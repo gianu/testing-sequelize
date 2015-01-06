@@ -26,6 +26,7 @@ var pgAdmin = {
                 sequelize.query( query )
                         .then(function() {
 
+                          sequelize.close();
                           callback();
                         }, function(error) {
                           console.log('error');
